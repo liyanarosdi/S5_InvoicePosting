@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AX_Close" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1306,1423" sap2010:WorkflowViewState.IdRef="AX_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AX_Close" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1306,1131" sap2010:WorkflowViewState.IdRef="AX_Close_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -47,58 +47,20 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AX_Close" sap:VirtualizedContainerService.HintSize="476,1318" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AX_Close" sap:VirtualizedContainerService.HintSize="476,1026" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="On Element Appear 'ax32.exe Microsoft'" sap:VirtualizedContainerService.HintSize="434,666" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_2" RepeatForever="False">
+    <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="On Element Appear 'ax32.exe Microsoft'" sap:VirtualizedContainerService.HintSize="434,374" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_2" RepeatForever="False">
       <ui:OnUiElementAppear.Body>
-        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Close button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d175653-74bb-40ab-b42f-5118cdbeab01" InformativeScreenshot="769e7f48495bdd5a8ea489bf6447f63d" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd cls='AxToolBarCtrl' /&gt;&lt;ctrl name='Filter By Grid  &amp;lt;Ctrl+G&amp;gt;' role='check box' /&gt;" WaitForReady="COMPLETE">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Close button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-            <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
-            </ui:Click.CursorPosition>
-            <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d175653-74bb-40ab-b42f-5118cdbeab01" InformativeScreenshot="73b670f2e274c5a5753f717ae7ca121a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" WaitForReady="COMPLETE">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-              </ui:Target>
-            </ui:Click.Target>
-          </ui:Click>
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Close button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
@@ -121,7 +83,7 @@
         </Sequence>
       </ui:OnUiElementAppear.Body>
       <ui:OnUiElementAppear.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6487b257-2d43-4e7c-82a6-b6c5e4bc2e57" InformativeScreenshot="e28db01028b9f82e0f815211dfa9dc43" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;" WaitForReady="COMPLETE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6487b257-2d43-4e7c-82a6-b6c5e4bc2e57" InformativeScreenshot="de2c8d641ac95dbc0b961ea6dad9d779" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxMainFrame' title='Microsoft Dynamics AX - S5 ASIA LIMITED [JSSHKGHOS68: Session ID*' /&gt;" WaitForReady="COMPLETE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

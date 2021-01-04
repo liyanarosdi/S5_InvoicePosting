@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>950,2934</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1306,3956</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AX_InvoicePosting_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -67,15 +67,15 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="960,2829" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap:VirtualizedContainerService.HintSize="960,3851" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="918,2606" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="918,3628" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="AX_InvoicePosting" sap:VirtualizedContainerService.HintSize="880,2379" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="AX_InvoicePosting" sap:VirtualizedContainerService.HintSize="880,3401" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="isUpdate" />
           </Sequence.Variables>
@@ -86,6 +86,28 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="838,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;AX Invoice Posting Start&quot;]" />
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  - Invoice Journal" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f24bb18-e7a8-48da-9c2c-c470a464c455" InformativeScreenshot="28f46c76657d13cf7e9410374ec2aed0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxMainFrame' title='Microsoft Dynamics AX - S5 ASIA LIMITED [JSSHKGHOS68: Session ID*' /&gt;&lt;wnd aaname='Workspace' cls='MDIClient' /&gt;&lt;wnd cls='ContentFrame' title='Content Pane' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Accounts payable' /&gt;&lt;wnd ctrlname='Submenu1' /&gt;&lt;ctrl name='Journals' role='grouping' /&gt;&lt;ctrl idx='1' name='Submenu1' role='link' /&gt;&lt;ctrl name='LedgerJournalTable9' role='link' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Filter" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
@@ -105,6 +127,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
+          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="838,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Filter" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
@@ -117,7 +140,26 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="e4a8d19435b8a1d58d691b8a53961bfa" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Header Control' cls='AxHeaderCtrl' /&gt;&lt;wnd cls='AxEdit' /&gt;" WaitForReady="COMPLETE">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="f09c47e9c215b1b55711c47391f4b08c" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Header Control' cls='AxHeaderCtrl' /&gt;&lt;ctrl name='Header Control' role='list' /&gt;&lt;ctrl name='Journal number' role='column header' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Filter" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="d03d009a5e421d18e654313c09f1d8af" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Header Control' cls='AxHeaderCtrl' /&gt;&lt;wnd cls='AxEdit' /&gt;" WaitForReady="COMPLETE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -227,7 +269,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Post" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Post" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -239,7 +281,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="fc729f6f4c05aaddc945c2fb030c183a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='#32768' idx='*' /&gt;" WaitForReady="COMPLETE">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="fc729f6f4c05aaddc945c2fb030c183a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='#32768' idx='*' /&gt;" WaitForReady="INTERACTIVE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -277,7 +319,7 @@
               <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="OK" />
             </PickBranch>
           </Pick>
-          <If Condition="[isUpdate = True]" sap:VirtualizedContainerService.HintSize="838,353" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[isUpdate = True]" sap:VirtualizedContainerService.HintSize="838,1021" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
@@ -285,7 +327,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Throw Exception="[New Exception(&quot;Fail to posting&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                <Throw Exception="[New Exception(&quot;Fail to posting&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,588" sap2010:WorkflowViewState.IdRef="Sequence_13">
@@ -357,16 +399,115 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AX_InvoicePosting workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AX\AX_InvoicePosting.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_VedNum">
-                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_VedNum" />
-                  </InOutArgument>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                  </InArgument>
-                </ui:InvokeWorkflowFile.Arguments>
-              </ui:InvokeWorkflowFile>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,873" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AX_InvoicePosting workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AX\AX_InvoicePosting.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="io_VedNum">
+                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_VedNum" />
+                          </InOutArgument>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="6311770d54cfdaa1d9586191ce216c16" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Infolog (1)' /&gt;&lt;wnd aaname='SysInfologBrowser' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Close' cls='AxButton' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="4f6fed3443c41b06ccae48b5237ef0e3" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal voucher (1 - sppa) - Journal: Vend_Inv, journal number: *' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="f9aea7a3afc14fb1313ff8ece5eca87a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Header Control' cls='AxHeaderCtrl' /&gt;&lt;ctrl name='Header Control' role='list' /&gt;&lt;ctrl name='Description' role='column header' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="c58d597f2a27a2ccc7f3bdfe62da35cb" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd cls='AxToolBarCtrl' /&gt;&lt;ctrl name='Filter By Grid  &amp;lt;Ctrl+G&amp;gt;' role='check box' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="e7926dd1d08165b065dcac895bab9a29" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </Sequence>
             </If.Else>
           </If>
         </Sequence>
@@ -383,7 +524,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="376,779" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence sap:VirtualizedContainerService.HintSize="376,1217" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -438,6 +579,51 @@
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="4f6fed3443c41b06ccae48b5237ef0e3" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal voucher (1 - sppa) - Journal: Vend_Inv, journal number: *' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="f9aea7a3afc14fb1313ff8ece5eca87a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Header Control' cls='AxHeaderCtrl' /&gt;&lt;ctrl name='Header Control' role='list' /&gt;&lt;ctrl name='Description' role='column header' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="c58d597f2a27a2ccc7f3bdfe62da35cb" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd cls='AxToolBarCtrl' /&gt;&lt;ctrl name='Filter By Grid  &amp;lt;Ctrl+G&amp;gt;' role='check box' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="e7926dd1d08165b065dcac895bab9a29" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
                 </ui:Click.Target>
               </ui:Click>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AX_Error workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SharePoint\SharePoint_Error.xaml">
