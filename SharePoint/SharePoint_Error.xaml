@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AX_Error" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1295,1037" sap2010:WorkflowViewState.IdRef="AX_Error_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AX_Error" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1306,1037" sap2010:WorkflowViewState.IdRef="AX_Error_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -61,12 +61,13 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AX_Error" sap:VirtualizedContainerService.HintSize="477,932" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SharePoint_Error" sap:VirtualizedContainerService.HintSize="477,1194" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;SharePoint Error Start&quot;]" />
     <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Dropdown button" sap:VirtualizedContainerService.HintSize="435,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
@@ -79,7 +80,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a4e88c9-f05e-4817-b5d3-bf177176abb6" InformativeScreenshot="d3a0d0a88f3d18b3babd111d6ec23cfc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='SG VIR TEST - RPA_POSTING - Google Chrome' /&gt;&lt;ctrl name='SG VIR TEST - RPA_POSTING' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='SG VIR TEST ' role='cell' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='SG VIR TEST ' role='cell' /&gt;&lt;ctrl role='row' idx='1' /&gt;&lt;ctrl name='SG VIR TEST ' role='cell' /&gt;&lt;ctrl name='SG VIR TEST ' role='table' /&gt;&lt;ctrl name='* Open Menu' role='cell' /&gt;&lt;ctrl role='grouping' idx='2' /&gt;" WaitForReady="COMPLETE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a4e88c9-f05e-4817-b5d3-bf177176abb6" InformativeScreenshot="d3a0d0a88f3d18b3babd111d6ec23cfc" Selector="&lt;html app='chrome.exe' title='SG VIR TEST - RPA_POSTING' /&gt;&lt;webctrl tag='A' aaname='Open Menu' colName='Name  ' /&gt;" WaitForReady="COMPLETE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -173,5 +174,6 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;SharePoint Error End&quot;]" />
   </Sequence>
 </Activity>
