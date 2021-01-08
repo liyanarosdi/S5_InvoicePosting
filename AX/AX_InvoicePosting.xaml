@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>950,5358</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1243,5458</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AX_InvoicePosting_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -72,15 +72,15 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="960,5253" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap:VirtualizedContainerService.HintSize="960,5353" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="918,5030" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="918,5130" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="AX_InvoicePosting" sap:VirtualizedContainerService.HintSize="880,3434" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="AX_InvoicePosting" sap:VirtualizedContainerService.HintSize="880,3534" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="isUpdate" />
           </Sequence.Variables>
@@ -93,14 +93,7 @@
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="838,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;AX Invoice Posting Start&quot;]" />
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  - Invoice Journal" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
+              <ui:CursorPosition OffsetX="25" OffsetY="10" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f24bb18-e7a8-48da-9c2c-c470a464c455" InformativeScreenshot="28f46c76657d13cf7e9410374ec2aed0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxMainFrame' title='Microsoft Dynamics AX - S5 ASIA LIMITED [JSSHKGHOS68: Session ID*' /&gt;&lt;wnd aaname='Workspace' cls='MDIClient' /&gt;&lt;wnd cls='ContentFrame' title='Content Pane' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Accounts payable' /&gt;&lt;wnd ctrlname='Submenu1' /&gt;&lt;ctrl name='Journals' role='grouping' /&gt;&lt;ctrl idx='1' name='Submenu1' role='link' /&gt;&lt;ctrl name='LedgerJournalTable9' role='link' /&gt;">
@@ -186,28 +179,19 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="838,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="838,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'ax32.exe Journal'" sap:VirtualizedContainerService.HintSize="838,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8b07952e-3ff6-4560-8828-934141f1787c">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52b2ae77-1dc5-4236-be8a-5e14fb1f237f" InformativeScreenshot="50e21b1caf92c6d3694122164c4b15c2" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;" WaitForReady="COMPLETE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Lines" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Lines" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
+              <ui:CursorPosition OffsetX="25" OffsetY="10" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="6d7022af307fe55fa9789a779709d905" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Lines' cls='AxButton' idx='2' /&gt;" WaitForReady="COMPLETE">
@@ -217,16 +201,9 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Approval" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Approval" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
+              <ui:CursorPosition OffsetX="25" OffsetY="10" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="d98233f6f98ca7a53cc51864217d9030" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal voucher (1 - sppa) - Journal: Vend_Inv, journal number: *' /&gt;&lt;wnd aaname='LedgerJournalTransVendInvoice' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Approval' cls='AxButton' /&gt;" WaitForReady="COMPLETE">
@@ -255,16 +232,9 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Post" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - Post" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
-              <ui:CursorPosition Position="Center">
-                <ui:CursorPosition.OffsetX>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetX>
-                <ui:CursorPosition.OffsetY>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:CursorPosition.OffsetY>
-              </ui:CursorPosition>
+              <ui:CursorPosition OffsetX="25" OffsetY="10" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="8913f7f400d6cd47b5bfceab71bc6247" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal voucher (1 - sppa) - Journal: Vend_Inv, journal number: *' /&gt;&lt;wnd aaname='LedgerJournalTransVendInvoice' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Post' cls='AxButton' /&gt;" WaitForReady="COMPLETE">
@@ -305,13 +275,10 @@
               <PickBranch.Trigger>
                 <ui:UiElementExists DisplayName="Element Exists - Vendor Invoice OK" Exists="[isUpdate]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d7ffb90-8842-4bb6-a95f-ee3d1361e0b1" InformativeScreenshot="417bf5e8d243dd19c0a89ed39fc6ae18" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Infolog (1)' /&gt;&lt;wnd aaname='SysInfologBrowser' cls='AxPaneWnd' /&gt;&lt;ctrl name='Update has been canceled*' role='outline item' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d7ffb90-8842-4bb6-a95f-ee3d1361e0b1" InformativeScreenshot="417bf5e8d243dd19c0a89ed39fc6ae18" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Infolog (1)' /&gt;&lt;wnd aaname='SysInfologBrowser' cls='AxPaneWnd' /&gt;&lt;ctrl name='Update has been canceled*' role='outline item' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
