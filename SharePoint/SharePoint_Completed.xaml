@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SharePoint_Completed" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1306,1391" sap2010:WorkflowViewState.IdRef="SharePoint_Completed_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SharePoint_Completed" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="782,1391" sap2010:WorkflowViewState.IdRef="SharePoint_Completed_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -80,7 +80,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a4e88c9-f05e-4817-b5d3-bf177176abb6" InformativeScreenshot="d3a0d0a88f3d18b3babd111d6ec23cfc" Selector="&lt;html app='chrome.exe' title='SG VIR TEST - RPA_POSTING' /&gt;&lt;webctrl tag='A' aaname='Open Menu' colName='Name  ' /&gt;" WaitForReady="COMPLETE">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a4e88c9-f05e-4817-b5d3-bf177176abb6" InformativeScreenshot="d3a0d0a88f3d18b3babd111d6ec23cfc" Selector="&lt;html app='chrome.exe' title='SG VIR * - RPA_POSTING' /&gt;&lt;webctrl tag='A' aaname='Open Menu' colName='Name  ' /&gt;" WaitForReady="COMPLETE">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -99,7 +99,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="277e070c-fe49-4d80-9688-918f4f7fa91b" InformativeScreenshot="a7c96a092f60dacf7a299ff6735be18d" Selector="&lt;html app='chrome.exe' title='SG VIR TEST - *' /&gt;&lt;webctrl aaname='Edit Properties' parentid='ID_EditProperties' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="277e070c-fe49-4d80-9688-918f4f7fa91b" InformativeScreenshot="a7c96a092f60dacf7a299ff6735be18d" Selector="&lt;html app='chrome.exe' title='SG VIR * - *' /&gt;&lt;webctrl aaname='Edit Properties' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -129,7 +129,7 @@
                 </scg:List>
               </ui:SelectItem.Items>
               <ui:SelectItem.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6241bb28-ad25-4996-9f29-e5c853cfafd5" InformativeScreenshot="4b0949e94798f6d5cedebade18ad149f" Selector="&lt;html app='chrome.exe' title='SG VIR TEST - *' /&gt;&lt;webctrl src='https://gbsc.s5asia.com/_layouts/listform.aspx?PageType=6&amp;amp;ListId*' tag='IFRAME' /&gt;&lt;webctrl aaname='Posted in AX?' tag='SELECT' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6241bb28-ad25-4996-9f29-e5c853cfafd5" InformativeScreenshot="4b0949e94798f6d5cedebade18ad149f" Selector="&lt;html app='chrome.exe' title='SG VIR * - *' /&gt;&lt;webctrl src='https://gbsc.s5asia.com/_layouts/listform.aspx?PageType=6&amp;amp;ListId*' tag='IFRAME' /&gt;&lt;webctrl aaname='Posted in AX?' tag='SELECT' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -139,7 +139,7 @@
           </Sequence>
         </ui:OnUiElementAppear.Body>
         <ui:OnUiElementAppear.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5b0f5d9-97b7-4e3b-852d-e2deb7442d3a" InformativeScreenshot="bce3636b6c03c883a381be26c4ea9cef" Selector="&lt;html app='chrome.exe' title='SG VIR TEST - *' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' tag='DIV' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5b0f5d9-97b7-4e3b-852d-e2deb7442d3a" InformativeScreenshot="bce3636b6c03c883a381be26c4ea9cef" Selector="&lt;html app='chrome.exe' title='SG VIR * - *' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' tag='DIV' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -167,7 +167,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2ceff2c8-b89e-4126-bc60-3760a622d803" InformativeScreenshot="2dd4ddbc67de88f0cbd2934278314146" Selector="&lt;html app='chrome.exe' title='SG VIR TEST - *' /&gt;&lt;webctrl src='https://gbsc.s5asia.com/_layouts/listform.aspx?PageType=6&amp;amp;ListId*' tag='IFRAME' /&gt;&lt;webctrl aaname='Save' id='ctl00_m_g_1f214a1e_be07_4127_928c_8aba5fd4ec81_ctl00_ctl02_ctl00*' tag='INPUT' type='button' /&gt;" WaitForReady="COMPLETE">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2ceff2c8-b89e-4126-bc60-3760a622d803" InformativeScreenshot="2dd4ddbc67de88f0cbd2934278314146" Selector="&lt;html app='chrome.exe' title='SG VIR * - *' /&gt;&lt;webctrl src='https://gbsc.s5asia.com/_layouts/listform.aspx?PageType=6&amp;amp;ListId*' tag='IFRAME' /&gt;&lt;webctrl aaname='Save' id='ctl00_m_g_*_ctl00_ctl02_ctl00*' tag='INPUT' type='button' /&gt;" WaitForReady="COMPLETE">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>

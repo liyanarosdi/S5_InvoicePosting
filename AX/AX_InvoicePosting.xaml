@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1306,6542</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>950,6637</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AX_InvoicePosting_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -73,18 +73,19 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="960,6437" sap2010:WorkflowViewState.IdRef="Sequence_11">
+  <Sequence sap:VirtualizedContainerService.HintSize="960,6532" sap2010:WorkflowViewState.IdRef="Sequence_11">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ErrorEmpty" />
+      <Variable x:TypeArguments="x:String" Name="Approve" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="918,6212" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="918,6309" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="AX_InvoicePosting" sap:VirtualizedContainerService.HintSize="880,4084" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="AX_InvoicePosting" sap:VirtualizedContainerService.HintSize="880,4080" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="isUpdate" />
           </Sequence.Variables>
@@ -95,13 +96,12 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="838,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;AX Invoice Posting Start&quot;]" />
-          <Assign sap:VirtualizedContainerService.HintSize="838,64" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap:VirtualizedContainerService.HintSize="838,60" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[ErrorEmpty]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String" xml:space="preserve">Error encountered, please check the following:
-1. Journal number blank</InArgument>
+              <InArgument x:TypeArguments="x:String">["Invoice posting error"]</InArgument>
             </Assign.Value>
           </Assign>
           <If Condition="[io_JournalNum = Nothing]" sap:VirtualizedContainerService.HintSize="838,208" sap2010:WorkflowViewState.IdRef="If_2">
@@ -112,12 +112,12 @@
               <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_7" />
             </If.Else>
           </If>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  - Invoice Journal" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click  - Invoice Journal" sap:VirtualizedContainerService.HintSize="838,106" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition OffsetX="25" OffsetY="10" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f24bb18-e7a8-48da-9c2c-c470a464c455" InformativeScreenshot="28f46c76657d13cf7e9410374ec2aed0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxMainFrame' title='Microsoft Dynamics AX - S5 ASIA LIMITED [JSSHKGHOS68: Session ID*' /&gt;&lt;wnd aaname='Workspace' cls='MDIClient' /&gt;&lt;wnd cls='ContentFrame' title='Content Pane' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Accounts payable' /&gt;&lt;wnd ctrlname='Submenu1' /&gt;&lt;ctrl name='Journals' role='grouping' /&gt;&lt;ctrl idx='1' name='Submenu1' role='link' /&gt;&lt;ctrl name='LedgerJournalTable9' role='link' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f24bb18-e7a8-48da-9c2c-c470a464c455" InformativeScreenshot="28f46c76657d13cf7e9410374ec2aed0" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxMainFrame' title='Microsoft Dynamics AX - S5 ASIA LIMITED*' /&gt;&lt;wnd aaname='Workspace' cls='MDIClient' /&gt;&lt;wnd cls='ContentFrame' title='Content Pane' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Accounts payable' /&gt;&lt;wnd ctrlname='Submenu1' /&gt;&lt;ctrl name='Journals' role='grouping' /&gt;&lt;ctrl idx='1' name='Submenu1' role='link' /&gt;&lt;ctrl name='LedgerJournalTable9' role='link' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -428,10 +428,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="884,1818" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="884,1919" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -439,7 +439,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="797,1749" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence sap:VirtualizedContainerService.HintSize="839,1850" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="ErrorInfo" />
                 <Variable x:TypeArguments="x:Boolean" Name="isElement" />
@@ -450,14 +450,14 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[exception.Message + &quot; : &quot;+ exception.Source]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="797,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[exception.Message + &quot; : &quot;+ exception.Source]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="755,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TakeScreenshot workflow" sap:VirtualizedContainerService.HintSize="797,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\TakeScreenshot.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Folder">[in_Config("ExScreenshotsFolderPath").ToString]</InArgument>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath" />
@@ -468,12 +468,12 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <ui:UiElementExists DisplayName="Element Exists - Vendor Invoice OK" Exists="[isElement]" sap:VirtualizedContainerService.HintSize="755,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+              <ui:UiElementExists DisplayName="Element Exists - Vendor Invoice OK" Exists="[isElement]" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d7ffb90-8842-4bb6-a95f-ee3d1361e0b1" InformativeScreenshot="417bf5e8d243dd19c0a89ed39fc6ae18" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Infolog (1)' /&gt;&lt;wnd aaname='SysInfologBrowser' cls='AxPaneWnd' /&gt;&lt;ctrl name='Update has been canceled*' role='outline item' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[isElement = False]" sap:VirtualizedContainerService.HintSize="755,1228" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[isElement = False]" sap:VirtualizedContainerService.HintSize="797,1329" sap2010:WorkflowViewState.IdRef="If_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -481,16 +481,112 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AX_Error workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SharePoint\SharePoint_Error.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorInfo">[ErrorInfo]</InOutArgument>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorEmpty">[ErrorEmpty]</InOutArgument>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="io_JournalNum">[io_JournalNum]</InOutArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,1044" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Approve]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">1</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+                      <ui:SendHotkey.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ffe6f762-d4df-461f-a6e3-c3e6286dd491">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:SendHotkey.Target>
+                    </ui:SendHotkey>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="4f6fed3443c41b06ccae48b5237ef0e3" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal voucher (1 - sppa) - Journal: Vend_Inv, journal number: *' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="f9aea7a3afc14fb1313ff8ece5eca87a" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd aaname='LedgerJournalTable' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Header Control' cls='AxHeaderCtrl' /&gt;&lt;ctrl name='Header Control' role='list' /&gt;&lt;ctrl name='Description' role='column header' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="c58d597f2a27a2ccc7f3bdfe62da35cb" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;wnd cls='AxToolBarCtrl' /&gt;&lt;ctrl name='Filter By Grid  &amp;lt;Ctrl+G&amp;gt;' role='check box' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="e7926dd1d08165b065dcac895bab9a29" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Journal (1 - sppa)' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
+                      </ui:Click.Target>
+                    </ui:Click>
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AX_Error workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SharePoint\SharePoint_Error.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorInfo">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ErrorInfo" />
+                        </InOutArgument>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorEmpty">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ErrorEmpty" />
+                        </InOutArgument>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="io_JournalNum">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_JournalNum" />
+                        </InOutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="io_Approve">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Approve" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,1080" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,1181" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -511,6 +607,7 @@
                         <OutArgument x:TypeArguments="x:String">[ErrorInfo]</OutArgument>
                       </ui:GetFullText.Text>
                     </ui:GetFullText>
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[ErrorInfo]" />
                     <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
@@ -526,7 +623,7 @@
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e62c8320-b9eb-46ed-91e2-049e33e4fbb8" InformativeScreenshot="6311770d54cfdaa1d9586191ce216c16" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='192.168.18.38 - Remote Desktop Connection' /&gt;&lt;wnd app='ax32.exe' cls='AxTopLevelFrame' title='Infolog (1)' /&gt;&lt;wnd aaname='SysInfologBrowser' cls='AxPaneWnd' /&gt;&lt;wnd aaname='Close' cls='AxButton' /&gt;" TimeoutMS="4000" WaitForReady="COMPLETE" />
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click - Close" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -588,9 +685,18 @@
                     </ui:Click>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AX_Error workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SharePoint\SharePoint_Error.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorInfo">[ErrorInfo]</InOutArgument>
-                        <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorEmpty">[ErrorEmpty]</InOutArgument>
-                        <InOutArgument x:TypeArguments="x:String" x:Key="io_JournalNum">[io_JournalNum]</InOutArgument>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorInfo">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ErrorInfo" />
+                        </InOutArgument>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="io_ErrorEmpty">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ErrorEmpty" />
+                        </InOutArgument>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="io_JournalNum">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_JournalNum" />
+                        </InOutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="io_Approve">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Approve" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
@@ -601,6 +707,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="918,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;AX Invoice Posting End&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="918,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;AX Invoice Posting End&quot;]" />
   </Sequence>
 </Activity>
